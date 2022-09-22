@@ -26,7 +26,22 @@ def Left():
         DrawImage(x,90,frame,2)
         frame = (frame+1)%10
 
+def Up():
+    frame = 0
+    action = 1
+    for y in range(90,510+1,10):
+        DrawImage(50,y,frame,1)
+        frame = (frame+1)%10
 
+def Down():
+    frame = 0
+    action = 3
+    for y in range(510,90-1,-10):
+        DrawImage(50,y,frame,3)
+        frame = (frame+1)%10
 
-Right()
-Left()
+while True:
+    Right()
+    Left()
+    Up()
+    Down()
